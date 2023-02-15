@@ -1,5 +1,5 @@
 from django.db import models
-from django.contrib.auth.models import User
+from django.contrib.auth.models import User, 
 
 
 class Event(models.Model):
@@ -10,4 +10,4 @@ class Event(models.Model):
     location = models.CharField(max_length=200)
     game = models.ForeignKey("Game", on_delete=models.CASCADE)
 
-    attendees = models.ManytoManyField('Gamer', through='EventAttendees')
+    attendees = models.ManyToManyField('Gamer', through='EventAttendees')
