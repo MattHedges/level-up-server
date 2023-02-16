@@ -1,11 +1,11 @@
 [
     {
         "model": "levelupapi.game",
-        "pk": 1,
+        "pk": 3,
         "fields": {
-            "name": "test game",
-            "description": "this is a test game.",
-            "genre": 1
+            "name": "not a test game",
+            "description": "this is a test game too.",
+            "genre": 2
         }
     }
 ]
