@@ -73,6 +73,11 @@ class EventView(ViewSet):
 
         return Response(serializer.data, status=status.HTTP_200_OK)
 
+    def destroy(self, request, pk):
+        event = event.objects.get(pk=pk)
+        event.delete()
+        return Response(None, status=status.HTTP_204_NO_CONTENT)
+
 class GamerSerializer(serializers.ModelSerializer):
     """JSON serializer for event
     """
